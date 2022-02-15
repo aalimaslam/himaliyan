@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HPH | What We Sell?</title>
+  </head>
+  <body>
+    <%- include("partial/nav") %>
+
+    <div class="container">
+    <div class="row">
+      <div class="fs-2 fw-bolder my-5 text-center">What we sell?</div>
+        <% data.forEach(e => { %>
+                <div class="card p-4 m-2 col col-12 ">
+                  <div class="row">
+
+                    <div class="col-12 col-md-5 text-center"> 
+                      <img src="<%= e.url %>" alt="image" class="w-50 h-100">
+                    </div>
+                    <div class="card-text-container col">
+                      <div class="card-name fs-3 my-2 fw-bolder"> <%= e.name %> </div>
+                      <div class="text-muted"> <%= e.description %> </div>
+                    </div>
+                  </div>
+                </div>
+        <% }) %>
+            
+        </div>    
+    </div>
+  </body>
+</html>
